@@ -64,9 +64,25 @@ const currentYear = new Date().getFullYear();
     </div>
     
     <!-- Bottom bar -->
-    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#6b7280]">
-      <p>&copy; {currentYear} ENDURE. All rights reserved.</p>
-      <p>Made with ❤️ for cyclists who love data.</p>
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-[#6b7280]">
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <p>&copy; {currentYear} ENDURE. All rights reserved.</p>
+        <p>Made with ❤️ for cyclists who love data.</p>
+      </div>
+      
+      <a 
+        href="https://www.strava.com" 
+        target="_blank" 
+        rel="noopener"
+        class="opacity-60 hover:opacity-100 transition-opacity"
+        aria-label="Powered by Strava"
+      >
+        <img 
+          src="/assets/pwrdBy_strava_orange/api_logo_pwrdBy_strava_horiz_orange.svg" 
+          alt="Powered by Strava" 
+          class="h-8"
+        />
+      </a>
     </div>
   </div>
 </footer>
