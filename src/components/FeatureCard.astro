@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  features: string[];
+  iconColor: 'pink' | 'orange' | 'blue';
+}
+
+const { title, features, iconColor } = Astro.props;
+
+const iconColors = {
+  pink: 'from-[#d63c6b] to-[#6b4c9a]',
+  orange: 'from-[#F05D23] to-[#ff8c5a]',
+  blue: 'from-[#3b82f6] to-[#06b6d4]'
+};
+
+const iconGradient = iconColors[iconColor];
+---
+
+<div class="card-surface p-8 hover:border-white/20 transition-all duration-300 hover:transform hover:-translate-y-1 group">
+  <!-- Icon -->
+  <div class={`w-14 h-14 rounded-2xl bg-gradient-to-br ${iconGradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+    <slot name="icon" />
+  </div>
+  
+  <!-- Title -->
+  <h3 class="text-xl font-bold mb-4 text-white">{title}</h3>
+  
+  <!-- Features list -->
+  <ul class="space-y-3">
+    {features.map((feature) => (
+      <li class="flex items-start gap-3 text-[#a0a5b5] text-sm leading-relaxed">
+        <svg class="w-5 h-5 text-[#22c55e] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span set:html={feature} />
+      </li>
+    ))}
+  </ul>
+</div>

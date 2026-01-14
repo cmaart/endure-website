@@ -1,0 +1,50 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Endure - Science-First Cycling App for Windows",
+  description = "Track your FTP & VO2max trends. Train with physiologically targeted workouts. Built for Windows cyclists who want data-driven training."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/endure-website/assets/ENDURE_E_icon_exact_from_screenshot.png" />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="cycling, FTP, VO2max, power training, indoor cycling, smart trainer, cycling app, Windows" />
+    <meta name="author" content="ENDURE" />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/endure-website/assets/ENDURE_lockup_exact_icon_4k_white_transparent.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Styles -->
+    <style is:global>
+      @import "../styles/global.css";
+    </style>
+  </head>
+  <body class="antialiased">
+    <slot />
+  </body>
+</html>

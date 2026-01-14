@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* ENDURE Design System - Color Tokens */
+@theme {
+  /* Background Colors - Deep Navy (no pure black) */
+  --color-endure-bg-primary: #1a1c23;
+  --color-endure-bg-secondary: #20222a;
+  --color-endure-surface: #2f3340;
+  --color-endure-surface-light: #3a3f4f;
+  
+  /* Primary Action - Vibrant Orange */
+  --color-endure-primary: #F05D23;
+  --color-endure-primary-hover: #ff6d33;
+  
+  /* Accent Colors - Pink to Purple gradient */
+  --color-endure-accent-pink: #d63c6b;
+  --color-endure-accent-purple: #6b4c9a;
+  
+  /* Utility Colors */
+  --color-endure-success: #22c55e;
+  --color-endure-warning: #f59e0b;
+  --color-endure-info: #3b82f6;
+  
+  /* Text Colors */
+  --color-endure-text-primary: #ffffff;
+  --color-endure-text-secondary: #a0a5b5;
+  --color-endure-text-muted: #6b7280;
+  
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(180deg, var(--color-endure-bg-primary) 0%, var(--color-endure-bg-secondary) 100%);
+  color: var(--color-endure-text-primary);
+  min-height: 100vh;
+}
+
+/* Custom Utilities */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-endure-accent-pink) 0%, var(--color-endure-accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-pink {
+  box-shadow: 0 0 60px 20px rgba(214, 60, 107, 0.3),
+              0 0 100px 40px rgba(107, 76, 154, 0.2);
+}
+
+.glow-orange {
+  box-shadow: 0 0 30px 10px rgba(240, 93, 35, 0.3);
+}
+
+.card-surface {
+  background: var(--color-endure-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.btn-primary {
+  background: var(--color-endure-primary);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-endure-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(240, 93, 35, 0.4);
+}
+
+/* Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}

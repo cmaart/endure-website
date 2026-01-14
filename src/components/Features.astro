@@ -1,0 +1,86 @@
+---
+import FeatureCard from './FeatureCard.astro';
+---
+
+<section id="features" class="py-24 relative">
+  <div class="container mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Everything you need for <span class="gradient-text">data-driven training</span>
+      </h2>
+      <p class="text-[#a0a5b5] text-lg max-w-2xl mx-auto">
+        No fluff, no gimmicks. Just the tools that actually matter for your cycling performance.
+      </p>
+    </div>
+    
+    <!-- Feature Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Analytics & Trends -->
+      <FeatureCard 
+        title="Analytics & Trends"
+        iconColor="pink"
+        features={[
+          "Current FTP & VO2max Estimates",
+          "Long-term Trend Analysis (FTP & VO2max)",
+          "Power Profile Visualization"
+        ]}
+      >
+        <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+        </svg>
+      </FeatureCard>
+      
+      <!-- Structured Training -->
+      <FeatureCard 
+        title="Structured Training"
+        iconColor="orange"
+        features={[
+          "<strong>No-Bullshit Library:</strong> Physiologically targeted workouts (VO2max, Threshold) only. No 'kitchen sink' junk.",
+          "<strong>Universal Import:</strong> Supports .ZWO, .MRC, and .ERG files.",
+          "<strong>Quick Free Ride:</strong> Optional ERG mode to ride by watts instantly."
+        ]}
+      >
+        <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      </FeatureCard>
+      
+      <!-- Connectivity & Sync -->
+      <FeatureCard 
+        title="Connectivity & Sync"
+        iconColor="blue"
+        features={[
+          "<strong>Bluetooth Smart:</strong> Connects to Smart Trainers, Power Meters & HR Monitors.",
+          "<strong>Strava Integration:</strong> Auto-Upload & History Sync (more platforms coming)."
+        ]}
+      >
+        <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.143 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+        </svg>
+      </FeatureCard>
+    </div>
+    
+    <!-- Screenshot showcase -->
+    <div class="mt-20 grid md:grid-cols-2 gap-8">
+      <div class="relative group">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#d63c6b]/20 to-[#6b4c9a]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img 
+          src="/endure-website/assets/screenshots/builtin_workouts.png" 
+          alt="ENDURE Workout Library" 
+          class="relative rounded-2xl border border-white/10 w-full"
+        />
+        <p class="text-center mt-4 text-[#a0a5b5] text-sm">Curated workout library with physiological targets</p>
+      </div>
+      <div class="relative group">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#F05D23]/20 to-[#d63c6b]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+        <img 
+          src="/endure-website/assets/screenshots/imported_workouts.png" 
+          alt="ENDURE Import Workouts" 
+          class="relative rounded-2xl border border-white/10 w-full"
+        />
+        <p class="text-center mt-4 text-[#a0a5b5] text-sm">Import your own workouts from any source</p>
+      </div>
+    </div>
+  </div>
+</section>
