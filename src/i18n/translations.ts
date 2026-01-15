@@ -4,9 +4,9 @@ export const translations = {
     // Hero
     hero: {
       badge: "Indoor Cycling App for Smart Trainers",
-      headline1: "Is your training working?",
-      headline2: "Track it. Understand it. Improve.",
-      subline: "The <strong>science-first indoor cycling app</strong> that answers the real question: <em>\"Am I getting better?\"</em> — Track FTP & VO2max trends, train with physiologically targeted workouts, and see your progress over time.",
+      headline1: "Ride. Analyze.",
+      headline2: "Improve.",
+      subline: "The <strong>fast, rock-solid indoor cycling app</strong> that just works. Connect your smart trainer, ride structured workouts, and track your FTP & VO2max trends over time — without the bloat.",
       cta: "Download for Windows",
       secondary: "Frequent updates. Community-driven development. Join the journey."
     },
@@ -23,10 +23,17 @@ export const translations = {
       sectionSubtitle: "No fluff, no gimmicks. A curated workout library, advanced ride analytics, and seamless trainer connectivity.",
       
       analytics: {
-        title: "Analytics & Trends",
-        feature1: "Current FTP & VO2max Estimates",
-        feature2: "Long-term Trend Analysis (FTP & VO2max)",
-        feature3: "Power Profile Visualization"
+        title: "Deep Progress Analytics",
+        feature1: "<strong>FTP & VO2max Trends:</strong> Track your fitness evolution over weeks and months.",
+        feature2: "<strong>Indoor + Outdoor:</strong> Syncs your Strava rides for a complete picture.",
+        feature3: "<strong>Power Profile:</strong> Visualize your strengths across durations."
+      },
+      
+      performance: {
+        title: "Fast & Rock-Solid",
+        feature1: "<strong>Ready in Seconds:</strong> From app start to riding in under 30 seconds. No bloat.",
+        feature2: "<strong>Crash-Proof Sessions:</strong> Auto-resume, reconnect & buffer. Never lose a ride.",
+        feature3: "<strong>Lightweight:</strong> Runs smooth, no gaming PC required."
       },
       
       training: {
@@ -82,17 +89,17 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure - Indoor Cycling App with Advanced Ride Analytics",
-      description: "Indoor trainer app with smart trainer connectivity. Ride structured workouts and track your FTP & VO2max trends over time. No training plans — just ride and analyze."
+      title: "Endure - Fast, Stable Indoor Cycling App with Deep Analytics",
+      description: "Ready to ride in under 30 seconds. Crash-proof sessions with auto-resume. Track FTP & VO2max trends from indoor and outdoor rides. No bloat, no training plans — just ride and analyze."
     }
   },
   de: {
     // Hero
     hero: {
       badge: "Indoor Cycling App für Smart Trainer",
-      headline1: "Funktioniert dein Training?",
-      headline2: "Tracke es. Verstehe es. Verbessere dich.",
-      subline: "Die <strong>wissenschaftlich fundierte Indoor Cycling App</strong>, die die echte Frage beantwortet: <em>\"Werde ich besser?\"</em> — Verfolge FTP- & VO2max-Trends, trainiere mit physiologisch gezielten Workouts und sieh deinen Fortschritt über die Zeit.",
+      headline1: "Fahren. Analysieren.",
+      headline2: "Verbessern.",
+      subline: "Die <strong>schnelle, stabile Indoor Cycling App</strong>, die einfach funktioniert. Verbinde deinen Smart Trainer, fahre strukturierte Workouts und verfolge deine FTP- & VO2max-Trends — ohne Bloat.",
       cta: "Download für Windows",
       secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei."
     },
@@ -109,10 +116,17 @@ export const translations = {
       sectionSubtitle: "Kein Schnickschnack, keine Spielereien. Kuratierte Workout-Bibliothek, erweiterte Fahrt-Analysen und nahtlose Trainer-Anbindung.",
       
       analytics: {
-        title: "Analysen & Trends",
-        feature1: "Aktuelle FTP & VO2max Schätzungen",
-        feature2: "Langzeit-Trend-Analyse (FTP & VO2max)",
-        feature3: "Power Profil Visualisierung"
+        title: "Tiefgehende Fortschritts-Analyse",
+        feature1: "<strong>FTP- & VO2max-Trends:</strong> Verfolge deine Fitness-Entwicklung über Wochen und Monate.",
+        feature2: "<strong>Indoor + Outdoor:</strong> Synchronisiert deine Strava-Fahrten für ein komplettes Bild.",
+        feature3: "<strong>Power Profil:</strong> Visualisiere deine Stärken über verschiedene Dauern."
+      },
+      
+      performance: {
+        title: "Schnell & Stabil",
+        feature1: "<strong>Bereit in Sekunden:</strong> Vom App-Start bis zur Fahrt in unter 30 Sekunden. Kein Bloat.",
+        feature2: "<strong>Crash-sichere Sessions:</strong> Auto-Resume, Reconnect & Buffer. Keine Fahrt geht verloren.",
+        feature3: "<strong>Leichtgewichtig:</strong> Läuft flüssig, kein Gaming-PC nötig."
       },
       
       training: {
@@ -168,8 +182,8 @@ export const translations = {
     },
     // SEO
     seo: {
-      title: "Endure - Indoor Cycling App mit erweiterter Fahrt-Analyse",
-      description: "Indoor Trainer App mit Smart Trainer Anbindung. Fahre strukturierte Workouts und verfolge deine FTP- & VO2max-Trends. Keine Trainingspläne — einfach fahren und analysieren."
+      title: "Endure - Schnelle, stabile Indoor Cycling App mit tiefgehender Analyse",
+      description: "In unter 30 Sekunden fahrbereit. Crash-sichere Sessions mit Auto-Resume. Verfolge FTP- & VO2max-Trends von Indoor- und Outdoor-Fahrten. Kein Bloat, keine Trainingspläne — einfach fahren und analysieren."
     }
   }
 };

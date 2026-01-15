@@ -23,8 +23,23 @@ const t = getTranslations(lang).features;
     </div>
     
     <!-- Feature Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Analytics & Trends -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Fast & Rock-Solid -->
+      <FeatureCard 
+        title={t.performance.title}
+        iconColor="green"
+        features={[
+          t.performance.feature1,
+          t.performance.feature2,
+          t.performance.feature3
+        ]}
+      >
+        <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      </FeatureCard>
+      
+      <!-- Deep Progress Analytics -->
       <FeatureCard 
         title={t.analytics.title}
         iconColor="pink"
@@ -50,7 +65,7 @@ const t = getTranslations(lang).features;
         ]}
       >
         <svg slot="icon" class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
         </svg>
       </FeatureCard>
       

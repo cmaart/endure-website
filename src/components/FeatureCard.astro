@@ -2,7 +2,7 @@
 interface Props {
   title: string;
   features: string[];
-  iconColor: 'pink' | 'orange' | 'blue';
+  iconColor: 'pink' | 'orange' | 'blue' | 'green';
 }
 
 const { title, features, iconColor } = Astro.props;
@@ -10,7 +10,8 @@ const { title, features, iconColor } = Astro.props;
 const iconColors = {
   pink: 'from-[#d63c6b] to-[#6b4c9a]',
   orange: 'from-[#F05D23] to-[#ff8c5a]',
-  blue: 'from-[#3b82f6] to-[#06b6d4]'
+  blue: 'from-[#3b82f6] to-[#06b6d4]',
+  green: 'from-[#22c55e] to-[#10b981]'
 };
 
 const iconGradient = iconColors[iconColor];
