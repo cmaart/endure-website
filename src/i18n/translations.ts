@@ -87,6 +87,13 @@ export const translations = {
       copyright: "ENDURE. All rights reserved.",
       made: "Made with ❤️ for cyclists who love data."
     },
+    // Video Demo
+    videoDemo: {
+      title: "See It",
+      titleHighlight: "In Action",
+      subtitle: "From app start to riding in under 30 seconds. No bloat, no waiting.",
+      caption: "App start to ride — real speed, no time-lapse"
+    },
     // SEO
     seo: {
       title: "Endure - Fast, Stable Indoor Cycling App with Deep Analytics",
@@ -179,6 +186,13 @@ export const translations = {
       
       copyright: "ENDURE. Alle Rechte vorbehalten.",
       made: "Gemacht mit ❤️ für Radfahrer, die Daten lieben."
+    },
+    // Video Demo
+    videoDemo: {
+      title: "Erlebe Es",
+      titleHighlight: "In Aktion",
+      subtitle: "Vom App-Start bis zur Fahrt in unter 30 Sekunden. Kein Bloat, kein Warten.",
+      caption: "App-Start bis Fahrt — echte Geschwindigkeit, kein Zeitraffer"
     },
     // SEO
     seo: {
