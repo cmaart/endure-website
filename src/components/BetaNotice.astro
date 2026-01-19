@@ -1,5 +1,6 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import { config } from '../config';
 
 interface Props {
   lang?: 'en' | 'de';
@@ -7,6 +8,7 @@ interface Props {
 
 const { lang = 'en' } = Astro.props;
 const t = getTranslations(lang).betaNotice;
+const isAvailable = config.isProductAvailable;
 ---
 
 <section class="py-12 relative overflow-hidden">
@@ -20,17 +22,17 @@ const t = getTranslations(lang).betaNotice;
         <svg class="w-4 h-4 text-[#F05D23]" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
         </svg>
-        <span class="text-sm font-medium text-[#F05D23]">{t.badge}</span>
+        <span class="text-sm font-medium text-[#F05D23]">{isAvailable ? t.badge : t.badgeComingSoon}</span>
       </div>
       
       <!-- Title -->
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        <span class="gradient-text">{t.title}</span>
+        <span class="gradient-text">{isAvailable ? t.title : t.titleComingSoon}</span>
       </h2>
       
       <!-- Description -->
       <p class="text-[#a0a5b5] text-lg leading-relaxed">
-        {t.description}
+        {isAvailable ? t.description : t.descriptionComingSoon}
       </p>
     </div>
   </div>

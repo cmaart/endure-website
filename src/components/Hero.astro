@@ -1,6 +1,7 @@
 ---
 import { getTranslations } from '../i18n/translations';
 import ScreenshotCarousel from './ScreenshotCarousel.astro';
+import { config } from '../config';
 
 interface Props {
   lang?: 'en' | 'de';
@@ -8,6 +9,7 @@ interface Props {
 
 const { lang = 'en' } = Astro.props;
 const t = getTranslations(lang).hero;
+const isAvailable = config.isProductAvailable;
 ---
 
 <section class="relative min-h-screen flex items-center overflow-hidden">
@@ -45,21 +47,36 @@ const t = getTranslations(lang).hero;
         <!-- Subline -->
         <p class="text-lg md:text-xl text-[#a0a5b5] mb-8 max-w-xl mx-auto lg:mx-0" set:html={t.subline}></p>
         
-        <!-- CTA Button -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
-          <a id="download-btn" href="#download" class="btn-primary text-lg">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
-            </svg>
-            {t.cta}
-          </a>
-        </div>
-        
-        <!-- Secondary text -->
-        <p class="text-sm text-[#6b7280] flex items-center gap-2 justify-center lg:justify-start">
-          <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-          {t.secondary}
-        </p>
+        {isAvailable ? (
+          <!-- CTA Button (when available) -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
+            <a id="download-btn" href="#download" class="btn-primary text-lg">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+              </svg>
+              {t.cta}
+            </a>
+          </div>
+          
+          <!-- Secondary text -->
+          <p class="text-sm text-[#6b7280] flex items-center gap-2 justify-center lg:justify-start">
+            <span class="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            {t.secondary}
+          </p>
+        ) : (
+          <!-- Coming Soon Badge (when not yet available) -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
+            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#F05D23]/20 to-[#d63c6b]/20 border border-[#F05D23]/30">
+              <span class="w-2 h-2 bg-[#F05D23] rounded-full animate-pulse"></span>
+              <span class="text-lg font-medium text-white">{t.comingSoon}</span>
+            </div>
+          </div>
+          
+          <!-- Coming soon secondary text -->
+          <p class="text-sm text-[#6b7280] flex items-center gap-2 justify-center lg:justify-start">
+            {t.comingSoonSecondary}
+          </p>
+        )}
       </div>
       
       <!-- Right: Screenshot Carousel -->

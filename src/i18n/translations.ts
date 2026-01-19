@@ -8,13 +8,18 @@ export const translations = {
       headline2: "Improve.",
       subline: "The <strong>fast, rock-solid indoor cycling app</strong> that just works. Connect your smart trainer, ride structured workouts, and track your FTP & VO2max trends over time — without the bloat.",
       cta: "Download for Windows",
-      secondary: "Frequent updates. Community-driven development. Join the journey."
+      secondary: "Frequent updates. Community-driven development. Join the journey.",
+      comingSoon: "Coming Soon",
+      comingSoonSecondary: "Windows release coming soon. Stay tuned for updates!"
     },
     // Beta Notice
     betaNotice: {
       badge: "Beta Version",
       title: "Currently Free!",
-      description: "ENDURE is in public beta and completely free to use (for now). We're building this together with the cycling community — enjoy full access while we continue to improve."
+      description: "ENDURE is in public beta and completely free to use (for now). We're building this together with the cycling community — enjoy full access while we continue to improve.",
+      badgeComingSoon: "Coming Soon",
+      titleComingSoon: "Public Beta Starting Soon!",
+      descriptionComingSoon: "ENDURE is launching into public beta soon — and it will be completely free during the beta phase. We're building this together with the cycling community. Stay tuned!"
     },
     // Features
     features: {
@@ -108,13 +113,18 @@ export const translations = {
       headline2: "Verbessern.",
       subline: "Die <strong>schnelle, stabile Indoor Cycling App</strong>, die einfach funktioniert. Verbinde deinen Smart Trainer, fahre strukturierte Workouts und verfolge deine FTP- & VO2max-Trends — ohne Bloat.",
       cta: "Download für Windows",
-      secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei."
+      secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei.",
+      comingSoon: "Demnächst Verfügbar",
+      comingSoonSecondary: "Windows-Release kommt bald. Bleib dran für Updates!"
     },
     // Beta Notice
     betaNotice: {
       badge: "Beta Version",
       title: "Aktuell Gratis!",
-      description: "ENDURE befindet sich in der öffentlichen Beta und ist komplett kostenlos nutzbar (aktuell). Wir bauen das gemeinsam mit der Radsport-Community — genieße vollen Zugriff während wir weiter verbessern."
+      description: "ENDURE befindet sich in der öffentlichen Beta und ist komplett kostenlos nutzbar (aktuell). Wir bauen das gemeinsam mit der Radsport-Community — genieße vollen Zugriff während wir weiter verbessern.",
+      badgeComingSoon: "Demnächst",
+      titleComingSoon: "Public Beta startet bald!",
+      descriptionComingSoon: "ENDURE startet bald in die öffentliche Beta — und wird während der Beta-Phase komplett kostenlos sein. Wir bauen das gemeinsam mit der Radsport-Community. Bleib dran!"
     },
     // Features
     features: {
