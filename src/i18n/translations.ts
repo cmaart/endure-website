@@ -9,6 +9,7 @@ export const translations = {
       subline: "The <strong>fast, rock-solid indoor cycling app</strong> that just works. Connect your smart trainer, ride structured workouts, and track your FTP & VO2max trends over time — without the bloat.",
       cta: "Download for Windows",
       secondary: "Frequent updates. Community-driven development. Join the journey.",
+      comingSoon: "Coming Soon",
       comingSoonSecondary: "Windows release coming soon. Stay tuned for updates!"
     },
     // App Showcase
