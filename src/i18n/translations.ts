@@ -4,9 +4,10 @@ export const translations = {
     // Hero
     hero: {
       badge: "Indoor Cycling App for Smart Trainers",
+      tagline: "Precision over Gimmicks",
       headline1: "Ride. Analyze.",
       headline2: "Improve.",
-      subline: "The <strong>fast, rock-solid indoor cycling app</strong> that just works. Connect your smart trainer, ride structured workouts, and track your FTP & VO2max trends over time — without the bloat.",
+      subline: "The indoor cycling app for the essentials. Connect your smart trainer, start your workout, and keep track of your FTP and VO2max trends. No gimmicks, just progress.",
       cta: "Download for Windows",
       secondary: "Frequent updates. Community-driven development. Join the journey.",
       comingSoon: "Coming Soon",
@@ -128,9 +129,10 @@ export const translations = {
     // Hero
     hero: {
       badge: "Indoor Cycling App für Smart Trainer",
+      tagline: "Präzision statt Spielerei",
       headline1: "Fahren. Analysieren.",
       headline2: "Verbessern.",
-      subline: "Die <strong>schnelle, stabile Indoor Cycling App</strong>, die einfach funktioniert. Verbinde deinen Smart Trainer, fahre strukturierte Workouts und verfolge deine FTP- & VO2max-Trends — ohne Bloat.",
+      subline: "Die Indoor Cycling App für das Wesentliche. Verbinde deinen Smart Trainer, starte dein Workout und behalte deine FTP- sowie VO2max-Trends im Blick. Kein Schnickschnack, nur Fortschritt.",
       cta: "Download für Windows",
       secondary: "Häufige Updates. Community-getriebene Entwicklung. Sei dabei.",
       comingSoon: "Demnächst Verfügbar",
