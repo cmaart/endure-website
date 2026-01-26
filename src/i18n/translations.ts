@@ -77,7 +77,8 @@ export const translations = {
       screenshot1Caption: "Curated workout library with physiological targets",
       screenshot2Caption: "Import your own workouts from any source",
       screenshot3Caption: "Detailed Power Profile: Strengths, Weaknesses & FTP Estimate",
-      screenshot4Caption: "Ride Screen: Precise Smart Trainer Control (ERG Mode)"
+      screenshot4Caption: "Ride Screen: Precise Smart Trainer Control (ERG Mode)",
+      screenshot5Caption: "Smart-Smoothing: Balances erratic power data for smooth trainer control."
     },
     // Roadmap
     roadmap: {
@@ -204,7 +205,8 @@ export const translations = {
       screenshot1Caption: "Kuratierte Workout-Bibliothek mit physiologischen Zielen",
       screenshot2Caption: "Importiere deine eigenen Workouts aus jeder Quelle",
       screenshot3Caption: "Detailliertes Power Profile: Stärken, Schwächen & FTP-Einschätzung",
-      screenshot4Caption: "Ride Screen: Präzise Smart Trainer Steuerung (ERG Modus)"
+      screenshot4Caption: "Ride Screen: Präzise Smart Trainer Steuerung (ERG Modus)",
+      screenshot5Caption: "Smart-Smoothing: Gleicht erratische Power-Daten aus für eine sanfte Trainer-Steuerung."
     },
     // Roadmap
     roadmap: {
