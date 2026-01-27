@@ -7,7 +7,7 @@ interface Props {
   lang?: 'en' | 'de';
 }
 
-const { lang = 'en' } = Astro.props;
+const { lang = (Astro.currentLocale as 'en' | 'de') || 'en' } = Astro.props;
 const t = getTranslations(lang);
 
 const title = Astro.props.title || t.seo.title;
@@ -26,6 +26,7 @@ const deUrl = `${siteUrl}/de`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <slot name="head" />
     
     <!-- Favicons -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

@@ -2,11 +2,7 @@
 import { getTranslations } from '../i18n/translations';
 import { config } from '../config';
 
-interface Props {
-  lang?: 'en' | 'de';
-}
-
-const { lang = 'en' } = Astro.props;
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).hero;
 const ts = getTranslations(lang).appShowcase;
 const isAvailable = config.isProductAvailable;

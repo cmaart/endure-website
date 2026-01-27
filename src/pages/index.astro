@@ -10,27 +10,30 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout lang="en">
-  <LanguageSwitcher currentLang="en" />
+<Layout>
+  <script is:inline slot="head">
+    // Auto-redirect to German if browser is German and no preference set
+    (function() {
+      const preferredLang = localStorage.getItem('preferredLang');
+      if (!preferredLang) {
+        const browserLang = navigator.language.toLowerCase();
+        if (browserLang.startsWith('de')) {
+          window.location.href = '/de';
+        }
+      } else if (preferredLang === 'de') {
+        window.location.href = '/de';
+      }
+    })();
+  </script>
+
+  <LanguageSwitcher />
   <main>
-    <Hero lang="en" />
-    <BetaNotice lang="en" />
-    <VideoDemo lang="en" />
-    <Features lang="en" />
-    <Roadmap lang="en" />
+    <Hero />
+    <BetaNotice />
+    <VideoDemo />
+    <Features />
+    <Roadmap />
   </main>
   <Lightbox />
-  <Footer lang="en" />
+  <Footer />
 </Layout>
-
-<script>
-  // Auto-redirect to German if browser is German and no preference set
-  const preferredLang = localStorage.getItem('preferredLang');
-  
-  if (!preferredLang) {
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('de')) {
-      window.location.href = '/de';
-    }
-  }
-</script>

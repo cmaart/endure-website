@@ -2,11 +2,7 @@
 import { getTranslations } from '../i18n/translations';
 import FeatureCard from './FeatureCard.astro';
 
-interface Props {
-  lang?: 'en' | 'de';
-}
-
-const { lang = 'en' } = Astro.props;
+const lang = Astro.currentLocale as 'en' | 'de' || 'en';
 const t = getTranslations(lang).features;
 ---
 

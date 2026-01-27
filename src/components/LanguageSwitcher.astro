@@ -1,5 +1,5 @@
 ---
-const { currentLang } = Astro.props;
+const currentLang = Astro.currentLocale as 'en' | 'de' || 'en';
 const isGerman = currentLang === 'de';
 ---
 
