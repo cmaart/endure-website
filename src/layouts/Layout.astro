@@ -1,5 +1,11 @@
 ---
 import { getTranslations } from '../i18n/translations';
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/800.css';
 
 interface Props {
   title?: string;
@@ -33,6 +39,7 @@ const deUrl = `${siteUrl}/de`;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
@@ -83,9 +90,8 @@ const deUrl = `${siteUrl}/de`;
     <meta name="twitter:image" content={`${siteUrl}/assets/screenshots/2026-01-14 10_18_41-Endure.min.jpeg`} />
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <!-- Inter font is now imported in the frontmatter via @fontsource/inter -->
     
     <!-- Styles -->
     <style is:global>
