@@ -30,18 +30,73 @@ const t = getTranslations(lang).videoDemo;
         <div class="absolute -inset-1 bg-gradient-to-r from-[#F05D23]/30 via-[#d63c6b]/30 to-[#6b4c9a]/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity"></div>
         
         <!-- Video frame -->
-        <div class="relative rounded-xl overflow-hidden border border-white/20 bg-[#0d0f14]">
-          <video 
-            autoplay 
-            loop 
-            muted 
-            playsinline
-            class="w-full h-auto block"
-          >
-            <source src="/videos/quick_ride_selection.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <!-- Video container with click-to-play -->
+        <div class="relative rounded-xl overflow-hidden border border-white/20 bg-[#0d0f14] aspect-video group/video cursor-pointer" id="video-container">
+          <!-- Thumbnail & Play Button (Default State) -->
+          <div id="video-placeholder" class="absolute inset-0 z-10">
+            <img 
+              src="/assets/screenshots/the_ride.min.min.webp" 
+              alt="Video Preview" 
+              class="w-full h-full object-cover opacity-80 group-hover/video:opacity-100 transition-opacity duration-500"
+            />
+            
+            <!-- Play Button Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-20 h-20 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 group-hover/video:scale-110 group-hover/video:bg-white/20 transition-all duration-300 shadow-2xl">
+                <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        
+          <template id="video-template">
+            <video 
+              autoplay 
+              loop 
+              muted 
+              playsinline
+              class="w-full h-full object-cover"
+            >
+              <source src="/videos/quick_ride_selection.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </template>
         </div>
+
+        <script>
+          const container = document.getElementById('video-container');
+          const placeholder = document.getElementById('video-placeholder');
+          const template = document.getElementById('video-template') as HTMLTemplateElement;
+
+          if (container && placeholder && template) {
+            const loadVideo = () => {
+              // Clone the video element
+              const videoContent = template.content.cloneNode(true);
+              
+              // Fade out placeholder
+              placeholder.style.opacity = '0';
+              
+              // Wait for transition, then replace
+              setTimeout(() => {
+                placeholder.remove();
+                container.appendChild(videoContent);
+              }, 300); // match transition duration roughly, or just swap immediately if preferred. 
+                       // actually removing it immediately is snappier for "click to play", 
+                       // but let's just append and let it sit on top if z-index works, 
+                       // or simpler: just clear and append.
+            };
+
+            // Simpler approach: On click, clear container and inject video
+            container.addEventListener('click', () => {
+              if (!container.querySelector('video')) {
+                 container.innerHTML = ''; // clear placeholder
+                 const videoContent = template.content.cloneNode(true);
+                 container.appendChild(videoContent);
+              }
+            }, { once: true });
+          }
+        </script>
       </div>
       
       <!-- Caption -->

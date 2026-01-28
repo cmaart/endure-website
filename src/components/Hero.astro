@@ -87,7 +87,7 @@ const isAvailable = config.isProductAvailable;
       </div>
 
       <!-- Connecting SVG Lines (Desktop) -->
-      <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0" style="stroke-dasharray: 10; stroke-dashoffset: 10;">
+      <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0" viewBox="0 0 100 100" preserveAspectRatio="none" style="stroke-dasharray: 10; stroke-dashoffset: 10;">
           <defs>
               <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stop-color="rgba(240, 93, 35, 0.1)" />
@@ -96,13 +96,13 @@ const isAvailable = config.isProductAvailable;
               </linearGradient>
           </defs>
           <!-- Top Left -->
-          <path d="M22% 25% Q 35% 25%, 38% 35%" fill="none" stroke="url(#line-gradient)" stroke-width="2" />
+          <path d="M22 25 Q 35 25, 38 35" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
           <!-- Top Right -->
-          <path d="M78% 25% Q 65% 25%, 62% 35%" fill="none" stroke="url(#line-gradient)" stroke-width="2" />
+          <path d="M78 25 Q 65 25, 62 35" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
            <!-- Bottom Left -->
-           <path d="M22% 65% Q 35% 65%, 38% 55%" fill="none" stroke="url(#line-gradient)" stroke-width="2" />
+           <path d="M22 65 Q 35 65, 38 55" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
            <!-- Bottom Right -->
-           <path d="M78% 65% Q 65% 65%, 62% 55%" fill="none" stroke="url(#line-gradient)" stroke-width="2" />
+           <path d="M78 65 Q 65 65, 62 55" fill="none" stroke="url(#line-gradient)" stroke-width="0.2" vector-effect="non-scaling-stroke" />
       </svg>
 
       <!-- Mobile Connected Layout -->
